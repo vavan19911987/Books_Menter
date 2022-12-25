@@ -1,45 +1,46 @@
-
-
-
-//
-// for (let red = '*'; red.length <= 8; red += "*"){
-//  console.log(red);
-// }
+//Цыклы
+for (let red = '*'; red.length <= 8; red += "*"){
+ console.log(red);
+}
 
 
 // FizzBizz
-// for (let i = 1; i <= 100; i++) {
-//  if (i % 3 == 0 && i % 5 == 0) {
-//   console.log('FizzBizz');
-//  } else if (i % 5 == 0) {
-//   console.log('Buzz');
-//  }else if (i % 3 == 0) {
-//   console.log('Fizz');
-//  }else {
-//     console.log(i);
-//   }
-//
-// }
+for (let i = 1; i <= 100; i++) {
+ if (i % 3 == 0 && i % 5 == 0) {
+  console.log('FizzBizz');
+ } else if (i % 5 == 0) {
+  console.log('Buzz');
+ }else if (i % 3 == 0) {
+  console.log('Fizz');
+ }else {
+    console.log(i);
+  }
+
+}
 
 //Шахматы
 
-// let size = 8;
-// let result = "";
-//
-// for (let i = 1; i <= size; i++) {
-//     if (i % 2 != 1) {
-//         result += " ";
-//     }
-//     for (let j = 1; j < size; j++) {
-//         if (j % 2 == 1) {
-//             result += "#";
-//         } else if (j % 2 != 1) {
-//             result += "  ";
-//         }
-//     }
-//     result += " \n";
-// }
-// console.log(result);
+let size = 8;
+let result = "";
+
+for (let i = 1; i <= size; i++) {
+    if (i % 2 != 1) {
+        result += " ";
+    }
+    for (let j = 1; j < size; j++) {
+        if (j % 2 == 1) {
+            result += "#";
+        } else if (j % 2 != 1) {
+            result += "  ";
+        }
+    }
+    result += " \n";
+}
+console.log(result);
+
+
+
+
 
 
 
