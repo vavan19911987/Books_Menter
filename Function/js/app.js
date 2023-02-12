@@ -15,7 +15,7 @@
 // ingredient(2, "столовые ложки", "оливкового масла");
 // ingredient(0.5, "чайной ложки", "кумина");
 // };
-// console.log(hummus(1));
+// console.log(hummus(2));
 
 // let z = 12;
 // const square = function (x) {
@@ -272,6 +272,134 @@
 // let lockingToo = minClosure(5);
 // console.log(lockingToo(-10) +" lockingToo");
 
+// function isEven(even) {
+//     function check(x, y) {
+//         if (x %2 === 2 || x === even) {
+//             return y;
+//         } else if (x > even) {
+//             return  null;
+//         } else {
+//             return check(x + 2, `${y} + 2`);
+//         }
+//     }
+//     return check(0, '0');
+//
+// }
+//
+// console.log(isEven(74));
 
 
+// function isEven(num) {
+//     function check(x) {
+//         if (x === 0) {
+//             return true;
+//         } else if (x === 1) {
+//             return  false;
+//         } else if (x < 0) {
+//             if (x %2 === -0) {
+//                 return true;
+//             }else  {
+//                 return false
+//             }
+//         } else {
+//             return check(x - 2);
+//         }
+//     }
+//     return check(num);
+// }
+// console.log(isEven(-6) + ' отрицательное четное');
+// console.log(isEven(-7) + ' отрицательное нечетно');
+// console.log(isEven(12) + ' положительное четное');
+// console.log(isEven(13) + ' положительное нечетное');
 
+// let i = 0;
+// let j = 0;
+// function scoredBall() {
+//     return function goalInside() {
+//         if (i <= j ) {
+//             i++;
+//             return `Аргентина забила ${i} гол(а)` + ' ' + `Франция ${j}`;
+//         } else if (j <= i) {
+//             j++;
+//             return `Франция забила ${j} гол(а)` + ' ' + `Аргентина ${i}`;
+//         }
+//     }
+// }
+// const scoredArgentina = scoredBall();
+// console.log(scoredArgentina());
+// const scoredFrance = scoredBall();
+// console.log(scoredFrance());
+// console.log(scoredFrance());
+// console.log(scoredFrance());
+
+// let i = 0;
+// let j = 0;
+// function scoredBall(country) {
+//     return function goalInside() {
+//         if (country === 'Аргентина') {
+//             return (`Аргентина забила ${++i} гол(а), Общий счет Франция - ${i} : ${j} - Аргентина`);
+//         } else if (country === 'Франция') {
+//             return (`Франция забила ${++j} гол(а), Общий счет Франция - ${i} : ${j} - Аргентина`);
+//         }
+//     }
+// }
+// const scoredArgentina = scoredBall('Аргентина');
+// const scoredFrance = scoredBall('Франция');
+// console.log(scoredArgentina());
+// console.log(scoredFrance());
+// console.log(scoredFrance());
+// console.log(scoredFrance());
+// console.log(scoredArgentina());
+// console.log(`Общий счет Франция - ${i} : ${j} - Аргентина`);
+
+
+// function isEven(integer) {
+//     function even() {
+//         if (integer % 2 === 0)  {
+//             return true;
+//         } else if (integer % 2 === 1) {
+//             return false;
+//         } else {
+//             return false;
+//         }
+//     }
+//     return even();
+// }
+
+// let day1 = {
+//     squirrel: false,
+//     events: ["работал", "трогал дерево", "ел nиццу", "бегал"],
+//     x: [1,1,1,1,1],
+//     q: []
+//
+// };
+//
+// console.log(Object.keys(day1));
+
+// let objectA = {a: 1, b: 2};
+// Object.assign(objectA, {b: 3, c: 4});
+// console.log(objectA);
+
+// const score = {visitors: 0, home: 0};
+// // Так можно
+// score.visitors = 1;
+// //А так нельзя
+// // score = {visitors: 1, home: 1};
+// console.log(score);
+
+
+// let journal = [];
+// function addEntry(events, squirrel) {
+//     journal.push({events, squirrel});
+// }
+// addEntry();
+// console.log(journal);
+
+
+function phi(table) {
+
+return (table[3] * table[0] - table[2] * table[1]) /
+
+    Math.sqrt((table[2] + table[3]) * (table[0] + table[1]) * (table[1] + table[3]) * (table[0] + table[2]));
+}
+console.log(phi([76, 9, 4, 1]));
